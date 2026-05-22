@@ -1,13 +1,11 @@
 import os
 
-
-
-
 from flask import Flask
 from app.database import db
 from app.routes import main
 import time
 import sqlalchemy.exc
+
 
 def create_app():
     app = Flask(__name__)

@@ -1,14 +1,13 @@
 import os
 import pytest
 
+from app.app import create_app
 
 
 os.environ["POSTGRES_USER"] = "postgres"
 os.environ["POSTGRES_PASSWORD"] = "postgres"
 os.environ["POSTGRES_HOST"] = "db"
 os.environ["POSTGRES_DB"] = "devops_lab"
-
-from app.app import create_app
 
 
 @pytest.fixture
