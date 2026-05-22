@@ -1,6 +1,8 @@
 import os
 import pytest
 
+
+
 os.environ["POSTGRES_USER"] = "postgres"
 os.environ["POSTGRES_PASSWORD"] = "postgres"
 os.environ["POSTGRES_HOST"] = "db"

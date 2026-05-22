@@ -1,5 +1,8 @@
 import os
 
+
+
+
 from flask import Flask
 from app.database import db
 from app.routes import main
@@ -11,8 +14,6 @@ def create_app():
 
     postgres_host = os.getenv("POSTGRES_HOST")
 
-    # Якщо PostgreSQL не налаштований —
-    # використовуємо локальний SQLite
     if postgres_host:
         app.config["SQLALCHEMY_DATABASE_URI"] = (
             f"postgresql://{os.getenv('POSTGRES_USER')}:"
